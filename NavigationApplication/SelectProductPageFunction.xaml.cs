@@ -26,10 +26,10 @@ namespace NavigationApplication
         {
             InitializeComponent();
             lstProducts.ItemsSource =
-                new ObservableCollection<string> {
-                    "Ice",
-                    "Snow",
-                    "Gold"
+                new ObservableCollection<Product> {
+                    new Product("Ice"),
+                    new Product("Snow"),
+                    new Product("Gold")
                 };
         }
          
@@ -38,8 +38,7 @@ namespace NavigationApplication
         {
             // Return the selection information.
             // ListBoxItem item = (ListBoxItem)lstProducts.SelectedItem;
-            string item = (string)lstProducts.SelectedItem;
-            Product product = new Product(item);
+            Product product = (Product)lstProducts.SelectedItem;
             OnReturn(new ReturnEventArgs<Product>(product));
         }
 
@@ -48,8 +47,6 @@ namespace NavigationApplication
             // Indicate that nothing was selected.
             OnReturn(null);
         }
-
-        
     }
 
     public class Product

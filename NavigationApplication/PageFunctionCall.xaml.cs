@@ -34,7 +34,7 @@ namespace NavigationApplication
         private void SelectProductPageFunction_Returned(object sender,
           ReturnEventArgs<Product> e)
         {
-            if (e != null) lblStatus.Content = "You chose: " + e.Result.Name;
+            if (e != null) lblStatus.Content = "You chose: " + e.Result?.Name;
         }
 
     }
