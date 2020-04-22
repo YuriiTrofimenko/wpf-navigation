@@ -8,7 +8,13 @@
       This page contains an embedded page in a frame.      
     </TextBlock>
 
-    <Frame Name="embeddedFrame" Margin="5" Source="Page1.xaml" BorderThickness="1" BorderBrush="Blue" Height="250"></Frame>
+    <Frame
+        Name="embeddedFrame"
+        Margin="5"
+        Source="Page1.xaml"
+        BorderThickness="1"
+        BorderBrush="Blue"
+        Height="250"></Frame>
     <CheckBox Name="chkOwnsJournal" Margin="5" Click="chkOwnsJournal_Click">Embedded Frame Owns Journal</CheckBox>
   </StackPanel>
 </Page>

@@ -13,9 +13,9 @@
     </Grid.RowDefinitions>
 
     <ListBox Name="lstProducts">
-      <ListBoxItem>Ice</ListBoxItem>
+      <!--<ListBoxItem>Ice</ListBoxItem>
       <ListBoxItem>Snow</ListBoxItem>
-      <ListBoxItem>Gold</ListBoxItem>
+      <ListBoxItem>Gold</ListBoxItem>-->
     </ListBox>
 
     

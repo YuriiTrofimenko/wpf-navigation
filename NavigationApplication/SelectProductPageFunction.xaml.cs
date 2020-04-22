@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,19 +19,27 @@ namespace NavigationApplication
     /// Interaction logic for SelectProductPageFunction.xaml
     /// </summary>
 
-    public partial class SelectProductPageFunction 
+    public partial class SelectProductPageFunction
     {
 
         public SelectProductPageFunction()
         {
             InitializeComponent();
+            lstProducts.ItemsSource =
+                new ObservableCollection<string> {
+                    "Ice",
+                    "Snow",
+                    "Gold"
+                };
         }
+         
 
         private void lnkOK_Click(object sender, RoutedEventArgs e)
         {
             // Return the selection information.
-            ListBoxItem item = (ListBoxItem)lstProducts.SelectedItem;            
-            Product product = new Product(item.Content.ToString());
+            // ListBoxItem item = (ListBoxItem)lstProducts.SelectedItem;
+            string item = (string)lstProducts.SelectedItem;
+            Product product = new Product(item);
             OnReturn(new ReturnEventArgs<Product>(product));
         }
 

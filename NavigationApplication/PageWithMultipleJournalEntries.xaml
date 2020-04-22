@@ -20,7 +20,7 @@
       </ListBox>
       <StackPanel Margin="5" Grid.Column="1" VerticalAlignment="Center">
         <Button Margin="3" Click="cmdAdd_Click">Add -&gt;</Button>
-        <Button Margin="3" Click="cmdRemove_Click">&lt;- Remove</Button>
+                <Button Margin="3" Click="cmdRemove_Click">&lt;- Remove</Button>
       </StackPanel>
       <ListBox Margin="5" Grid.Column="2" Name="lstTarget"></ListBox>
 
